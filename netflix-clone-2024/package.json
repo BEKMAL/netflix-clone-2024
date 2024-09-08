@@ -3,12 +3,10 @@
   "name": "netflix-clone-2024",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://bekmal.github.io/netflix-clone-2024",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist",
+    
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
