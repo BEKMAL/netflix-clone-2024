@@ -36,13 +36,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
             movieTrailer(movie?.title || movie?.name || movie?.original_name)
             // movieTrailer( null, { tmdbId: movie.id} ) 
                 .then((url) => {
-                    // console.log(movie.id);
-                    // console.log(movie.name);
-                    // console.log(url)
                     const urlParams = new URLSearchParams(new URL(url).search)
-                    // console.log(urlParams)
-                    // console.log(urlParams.get('v'))
-                  
                     if(trailerUrl && prevtrailerurl.current==urlParams.get('v'))
                     {
                         setTrailerUrl('') 
