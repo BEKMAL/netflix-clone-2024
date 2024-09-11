@@ -33,7 +33,7 @@ jobs:
         with:
           global-json-file: global.json
           cache: true
-          cache-dependency-path: Netflix-clone/netflix-clone-2024/packages.lock.json
+          cache-dependency-path: netflix-clone-2024/packages.lock.json
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
