@@ -8,17 +8,16 @@ function Row({ title, fetchUrl, isLargeRow }) {
     const [movies, setMovie] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
     const prevtrailerurl=useRef("");
-  
-   
+
     const base_url = "https://image.tmdb.org/t/p/original";
 
 
     useEffect(() => {
         (async () => {
             try {
-                // console.log(fetchUrl)
+               
                 const request = await axios.get(fetchUrl);
-                // console.log(request)
+               
                 setMovie(request.data.results);
             } catch (error) {
                 console.log("error", error);
@@ -77,6 +76,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     <div style={{ padding: '40px' }}>
        
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+         
     </div>
 </div>
   )
